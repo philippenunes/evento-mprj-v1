@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css.css">
+<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="script-modelos.js"></script>
+<meta charset="ISO-8859-1">
+<title>Eventos - MPRJ</title>
+</head>
+
+<body>
+
+	<div class="navbar navbar-static-top navbar-inverse">
+		<div class="navbar-inner">
+			<div class="container">
+				<div class="nav-bar">
+					<ul class="menu-principal">
+						<li>
+							<div class="dropdown">
+								<a href="#" data-toggle="dropdown">Cadastrar</a>
+								<ul class="dropdown-menu">
+									<li><a href="cadastro-evento.html">Eventos</a></li>
+									<li><a href="cadastro-equipamento.html">Equipamento PGJ</a></li>
+								</ul>
+							</div>
+						</li>&ensp;
+						<li>
+							<div class="dropdown">
+								<a href="#" data-toggle="dropdown">Listar</a>
+								<ul class="dropdown-menu">
+									<li><a href="lista-evento.jsp?parametro=0">Eventos</a></li>
+									<li><a href="lista-equipamento.jsp?parametro=0">Inventário
+											PGJ</a></li>
+								</ul>
+							</div>
+						</li>&ensp;
+						<li><a href="suporte.html">Suporte</a></li>
+						<li><a href="suporte.html">Sair</a></li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<hr>
+	<br>
+	<br>
+
+	<div class="container">
+
+		<div class="wrap">
+
+			<div class="area-formulario">
+				<div class="container-formulario">
+					<form class="formulario-de-evento" name="f1"
+						action="InsereEquipamentoPGJ" method="post">
+						<table class="table">
+							<caption>Formulário de equipamento</caption>
+							<tr>
+								<td>Tipo:</td>
+								<td><select name=tipo onchange="muda_modelo()">
+										<option value="0" selected>Selecione...
+										<option value="1">Desktop
+										<option value="2">Notebook
+										<option value="3">Impressora
+										<option value="4">Monitor
+								</select></td>
+							</tr>
+							<tr>
+								<td>Modelo:</td>
+								<td><select name=modelo>
+										<option value="-">-
+								</select></td>
+							</tr>
+							<tr>
+								<td>Situação:</td>
+								<td><select name="situacao">
+										<option value="0" selected>Selecione...
+										<option value="1">Ativo
+										<option value="2">Inativo
+								</select></td>
+							</tr>
+							<tr>
+								<td>P/N:</td>
+								<td><input placeholder="Patrimônio" required="required"
+									class="form-control" type="number" name="pn" max="999999"></td>
+							</tr>
+							<tr>
+								<td>S/N:</td>
+								<td><input placeholder="Nº de série" class="form-control"
+									type="text" name="sn" maxlength=30></td>
+							</tr>
+							<tr>
+								<td>Comentários:</td>
+								<td><textarea placeholder="Comentários"
+										class="form-control" name="comentario" maxlength=200></textarea></td>
+							</tr>
+							<tr>
+								<td><input type="submit" value="Cadastrar">
+								<td>
+							</tr>
+						</table>
+					</form>
+				</div>
+
+				<div class="container-logo">
+					<img class="logo" src="imagens/logo_mp.png">
+					<div class="titulo">
+						<h2>Cadastro Equipamento - PGJ</h2>
+					</div>
+				</div>
+
+				<p></p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
